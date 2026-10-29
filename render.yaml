@@ -1,0 +1,13 @@
+# Render deploy (free tier will sleep on idle; a paid instance stays awake).
+# Steps: push this folder to its own GitHub repo, create a Render Web Service from
+# that repo with Dockerfile, set no env vars, deploy, then point the Fifty Bridges
+# site's Motus lookup at https://<your-render-service>.onrender.com/insurance?dot=...
+# NOTE: Do not deploy until Ruben confirms the hosting account/plan — this file is
+# the ready-to-deploy config, not a live service yet.
+services:
+  - type: web
+    name: motus-playwright-service
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health

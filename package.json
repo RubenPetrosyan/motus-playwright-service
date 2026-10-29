@@ -1,0 +1,1 @@
+{"dependencies":{"express":"^4.19.2","playwright":"^1.48.0"},"description":"Headless-browser (non-API) Motus public snapshot insurance history service for Fifty Bridges","main":"server.js","name":"motus-playwright-service","private":true,"scripts":{"postinstall":"npx playwright install --with-deps chromium","start":"node server.js"},"version":"1.0.0"}
